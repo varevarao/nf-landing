@@ -66,7 +66,7 @@ const CardsContainer = styled(SwipeableCards)`
 
 const CareersSection = () => {
     return (
-        <CareersContainer title={["Do you love", " solving problems?"]} subtitle={"If the answer is ‘YES’, Just click on ‘Check opening’ Button below and see where you can fit in. NowFloats has been a exciting rolar-coaster ride so far & with you, we are hoping it to get even more exciting."}>
+        <CareersContainer title={["Do you love", " solving problems?"]} subtitle={"If the answer is ‘YES’, Just click on ‘Check opening’ Button below and see where you can fit in. NowFloats has been a exciting roller-coaster ride so far & with you, we are hoping it to get even more exciting."}>
             <Testimonials>
                 <CareerBG />
                 <QuoteContainer />

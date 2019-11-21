@@ -5,6 +5,7 @@ export const DisplayText = styled.span`
     ${props => {
         switch (props.size) {
             case 'inherit': return css`font-size: inherit;`;
+            case 'xxsmall': return css`font-size: .5rem;`;
             case 'xsmall': return css`font-size: .675rem;`;
             case 'small': return css`font-size: 0.75rem;`;
             case 'medium': return css`font-size: 1rem;`;
@@ -21,7 +22,7 @@ export const DisplayText = styled.span`
         switch (props.variant) {
             case 'inherit': return css`font-weight: inherit;`;
             case 'strong': return css`font-weight: 600;`;
-            case 'subdued': return css`font-weight: 200;`;
+            case 'subdued': return css`font-weight: 100;`;
             case 'regular': default:
                 return css`font-weight: 400;`;
         }
