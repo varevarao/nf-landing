@@ -1,11 +1,28 @@
-import React from 'react'
+import React from 'react';
+import Header from './header';
+import Sections from './sections';
+import { ThemeProvider } from 'styled-components';
 
-function App() {
-    return (
-        <div>
-            
-        </div>
-    )
+const theme = {
+    breakpoints: {
+        xs: 0,
+        sm: 576,
+        md: 768,
+        lg: 992,
+        xl: 1200,
+    }
 }
 
-export default App
+const App = () => {
+    return (
+        <ThemeProvider theme={theme}>
+            {/* Main app header */}
+            <Header />
+
+            {/* The various sections */}
+            <Sections />
+        </ThemeProvider>
+    )
+};
+
+export default App;

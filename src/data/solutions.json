@@ -1,0 +1,24 @@
+{
+    "list": [
+        {
+            "title": "Boost Keyboard",
+            "desc": "With this keyboard, simply share your business updates, products, photos or your business’ location while chatting with your customers on an Instant messaging app of your choice.",
+            "image": "/img/group-7.jpg"
+        },
+        {
+            "title": "ANA Chatbot",
+            "desc": "This open source patented technology allows any enterprise business to have a customized chatbot with a freedom to build most complex chat flows simply by dragging the scripts.",
+            "image": "/img/group-7.jpg"
+        },
+        {
+            "title": "NowFloats Exchange",
+            "desc": "NowFloats Exchange is responsible engine beind the successful data flow between different channels to maximize the impact of any content created by the business owner.",
+            "image": "/img/group-7.jpg"
+        },
+        {
+            "title": "Rocket Singh (Beta)",
+            "desc": "A Bot based app, helping your enterprise FOS with what they need to focus on today. No extra clutter so that they focus on the target. Also helps with their attendence, live location, instant discount approval, logging sales etc.",
+            "image": "/img/group-7.jpg"
+        }
+    ]
+}

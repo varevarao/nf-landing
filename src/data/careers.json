@@ -1,0 +1,40 @@
+{
+    "testimonials": [
+        {
+            "image": "img/oval.jpg",
+            "desc": "NowFloats is World Class Product startup with excellent execution of usability. I am proud to be part of NowFloats.",
+            "name": "Sneha",
+            "designation": "Experience Engineer"
+        },
+        {
+            "image": "img/oval.jpg",
+            "desc": "NowFloats is World Class Product startup with excellent execution of usability. I am proud to be part of NowFloats.",
+            "name": "Sneha",
+            "designation": "Experience Engineer"
+        },
+        {
+            "image": "img/oval.jpg",
+            "desc": "NowFloats is World Class Product startup with excellent execution of usability. I am proud to be part of NowFloats.",
+            "name": "Sneha",
+            "designation": "Experience Engineer"
+        },
+        {
+            "image": "img/oval.jpg",
+            "desc": "NowFloats is World Class Product startup with excellent execution of usability. I am proud to be part of NowFloats.",
+            "name": "Sneha",
+            "designation": "Experience Engineer"
+        },
+        {
+            "image": "img/oval.jpg",
+            "desc": "NowFloats is World Class Product startup with excellent execution of usability. I am proud to be part of NowFloats.",
+            "name": "Sneha",
+            "designation": "Experience Engineer"
+        },
+        {
+            "image": "img/oval.jpg",
+            "desc": "NowFloats is World Class Product startup with excellent execution of usability. I am proud to be part of NowFloats.",
+            "name": "Sneha",
+            "designation": "Experience Engineer"
+        }
+    ]
+}
