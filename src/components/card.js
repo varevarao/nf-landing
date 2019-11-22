@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 import { DisplayText } from './display-text';
+import breakpoint from 'styled-components-breakpoint';
 
 const Card = styled.div`
     height: 20rem;
     width: 20rem;
+    
+    ${breakpoint('sm')`
+        height: 20rem;
+        width: 20rem;
+    `}
 
-    border-radius: 5px;
-    border-radius: 23px;
+    border-radius: 10px;
     box-shadow: 0 5px 23px 0 rgba(255, 185, 0, 0.2);
     background-color: #ffffff;
 
@@ -35,6 +40,7 @@ export const CardImage = styled.div`
 export const CardContent = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     width: calc(100% - 1rem);
     height: 50%;
@@ -50,6 +56,7 @@ export const CardTitle = styled(DisplayText)`
 
 export const CardDesc = styled(DisplayText)`
     margin-top: 1rem;
+    padding: 0 1rem;
 `;
 
 export const CardActions = styled.div`

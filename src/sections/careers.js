@@ -6,7 +6,7 @@ import SwipeableCards from '../components/swipeable-cards';
 import Content from '../data/careers.json';
 
 const CareersContainer = styled(Section)`
-    
+    background-color: white;
 `;
 
 const Testimonials = styled.div`
@@ -44,10 +44,20 @@ const QuoteContainer = styled.div`
 
     height: 38%;
     width: calc(100% - 1.5rem);
-
+    
     ${breakpoint('sm')`
-        height: 55%;
-        width: calc(50% - 1.5rem);
+        height: 30%;
+        width: calc(100% - 2.5rem);
+    `}
+
+    ${breakpoint('md', 'lg')`
+        height: 40%;
+        width: calc(50% - 2rem);
+    `}
+
+    ${breakpoint('lg')`
+        height: 50%;
+        width: calc(50% - 2rem);
     `}
 
     padding-top: 2.5rem;
@@ -56,17 +66,18 @@ const QuoteContainer = styled.div`
 const CardsContainer = styled(SwipeableCards)`
     height: 75%;
     width: 100%;
-
-    ${breakpoint('sm')`
+    
+    ${breakpoint('md')`
+        height: 100%;
         width: 50%;
     `}
 
     margin-top: 2.5rem;
 `;
 
-const CareersSection = () => {
+const CareersSection = ({ ...props }) => {
     return (
-        <CareersContainer title={["Do you love", " solving problems?"]} subtitle={"If the answer is ‘YES’, Just click on ‘Check opening’ Button below and see where you can fit in. NowFloats has been a exciting roller-coaster ride so far & with you, we are hoping it to get even more exciting."}>
+        <CareersContainer title={["Do you love", " solving problems?"]} subtitle={"If the answer is ‘YES’, Just click on ‘Check opening’ Button below and see where you can fit in. NowFloats has been a exciting roller-coaster ride so far & with you, we are hoping it to get even more exciting."} {...props}>
             <Testimonials>
                 <CareerBG />
                 <QuoteContainer />

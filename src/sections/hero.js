@@ -5,16 +5,13 @@ import { DisplayText } from '../components/display-text';
 import Logo from '../components/logo';
 
 const HeroContainer = styled.section`
-    min-height: 100vh;
+    min-height: 90vh;
+    ${breakpoint('sm')`
+        min-height: 100vh;
+    `}
+    
     width: 100%;
     position: relative;
-
-    background-image: url('/img/nf-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: darken;
-    background-attachment: fixed;
 `;
 
 const HeroContent = styled.div`
@@ -37,6 +34,24 @@ const HeroContent = styled.div`
     `}
 `;
 
+const HeroBG = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+
+    background-image: url('/img/nf-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+`;
+
 const HeroText = styled.div`
     margin-top: 5rem;
     display: flex;
@@ -47,11 +62,14 @@ const HeroWave = styled.img`
     position: absolute;
     bottom: -2px;
     width: 100%;
+
+    /* height: 3rem; */
 `;
 
-const HeroSection = () => {
+const HeroSection = ({ ...props }) => {
     return (
-        <HeroContainer>
+        <HeroContainer {...props}>
+            <HeroBG />
             <HeroContent>
                 <Logo />
                 <HeroText>

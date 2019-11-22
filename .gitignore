@@ -59,3 +59,6 @@ typings/
 
 # webpack files
 stats.json
+
+# Mac
+.DS_Store

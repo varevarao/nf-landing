@@ -4,8 +4,8 @@ import styled, { css } from 'styled-components';
 const ArrowOnly = styled.div`
     width: 0;
     height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
 
     display: inline-flex;
     cursor: pointer;
@@ -15,8 +15,8 @@ const ArrowOnly = styled.div`
 `;
 
 const ArrowBG = styled.div`
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     background-color: ${props => typeof props.bg === 'string' ? props.bg : 'white'};
     border-radius: 50%;
 

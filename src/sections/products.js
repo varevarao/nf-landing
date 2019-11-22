@@ -25,9 +25,13 @@ const CenteredCol = styled(Col)`
     justify-content: center;
 `;
 
-const ProductsSection = () => {
+const ProductsSection = ({ ...props }) => {
     return (
-        <ProductsContainer title={["Take full control", " of your business"]} subtitle={"We help you do everything you need from setting up your business’ digital identity, pushing it to multiple channels, to managing it across, scaling it’s reach via cloud for entriprise level growth. Just pick the one from below which suites your business needs."}>
+        <ProductsContainer
+            title={["Take full control", " of your business"]}
+            subtitle={"We help you do everything you need from setting up your business’ digital identity, pushing it to multiple channels, to managing it across, scaling it’s reach via cloud for entriprise level growth. Just pick the one from below which suites your business needs."}
+            {...props}
+        >
             <Row className="cards">
                 <CenteredCol xs={12} md={6}>
                     <ProductCard

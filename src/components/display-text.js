@@ -5,13 +5,13 @@ export const DisplayText = styled.span`
     ${props => {
         switch (props.size) {
             case 'inherit': return css`font-size: inherit;`;
-            case 'xxsmall': return css`font-size: .5rem;`;
-            case 'xsmall': return css`font-size: .675rem;`;
+            case 'xxsmall': return css`font-size: 0.5rem;`;
+            case 'xsmall': return css`font-size: 0.6rem;`;
             case 'small': return css`font-size: 0.75rem;`;
             case 'medium': return css`font-size: 1rem;`;
-            case 'large': return css`font-size: 1.2rem;`;
-            case 'xlarge': return css`font-size: 2rem;`;
-            case 'xxlarge': return css`font-size: 3rem;`;
+            case 'large': return css`font-size: 1.25rem;`;
+            case 'xlarge': return css`font-size: 1.75rem;`;
+            case 'xxlarge': return css`font-size: 2.25rem;`;
             default:
                 return css`font-size: 1rem;`;
         }

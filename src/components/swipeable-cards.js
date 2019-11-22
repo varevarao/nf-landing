@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 
 const SwipeArea = styled.div`
-    width: 100%;
+    width: 96%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,8 +32,7 @@ const Dots = styled.div`
     width: 100%;
     height: 1rem;
 
-    margin-bottom: 1rem;
-    ${breakpoint('sm')`
+    ${breakpoint('md')`
         margin-bottom: 0.5rem;
     `}
 `;
@@ -60,15 +59,13 @@ const SwipeArrow = styled(Arrow)`
     ${props => props.isHidden && css`
         visibility: hidden;
     `}
+
+    margin-top: 5rem;
 `
 
 const QuoteImage = styled.img`
     clip-path: circle();
-    width: 10rem;
-
-    ${breakpoint('md')`
-        width: 6rem;
-    `}
+    width: 6rem;
 `;
 
 const Testimonial = styled.div`
@@ -88,10 +85,12 @@ const Testimonial = styled.div`
 
     .content-area {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
 
-        margin-bottom: 2rem;
+        ${breakpoint('md')`
+            margin-bottom: 2rem;
+        `}
 
         >span {
             width: 75%;
@@ -106,6 +105,7 @@ const SwipeableCards = ({ className, items, action, onAction }) => {
     return (
         <Container className={className}>
             <SwipeArea>
+                <SwipeArrow isHidden={active <= 0} bg={true} onClick={() => setActive(active - 1)} />
                 <SwipeContainer
                     index={active}
                     onChangeIndex={index => setActive(index)}
@@ -117,19 +117,20 @@ const SwipeableCards = ({ className, items, action, onAction }) => {
                                 <QuoteImage src={quote.image} />
                             </div>
                             <div className="content-area">
-                                <SwipeArrow isHidden={active <= 0} bg={true} onClick={() => setActive(active - 1)} />
-                                <DisplayText size="medium" styled="italic" color="white">
+
+                                <DisplayText size="small" styled="italic" color="white">
                                     {quote.desc}
                                 </DisplayText>
-                                <SwipeArrow direction="right" isHidden={active >= (totalElements - 1)} bg={true} onClick={() => setActive(active + 1)} />
+
                             </div>
 
-                            <DisplayText size="small" styled="italic" color="white">
+                            <DisplayText size="xsmall" styled="italic" color="white">
                                 {quote.name} . {quote.designation}
                             </DisplayText>
                         </Testimonial>
                     ))}
                 </SwipeContainer>
+                <SwipeArrow direction="right" isHidden={active >= (totalElements - 1)} bg={true} onClick={() => setActive(active + 1)} />
             </SwipeArea>
             <Dots>
                 {[...new Array(totalElements)].map((r, index) => (
@@ -139,7 +140,7 @@ const SwipeableCards = ({ className, items, action, onAction }) => {
             <Actions>
                 {action ? (
                     <ActionButton onClick={onAction} color="white">
-                        <DisplayText size="small" variant="inherit" color="#4a4a4a">
+                        <DisplayText size="xsmall" variant="inherit" color="#4a4a4a">
                             {action}
                         </DisplayText>
                     </ActionButton>

@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 const theme = {
     breakpoints: {
         xs: 0,
-        sm: 576,
+        sm: 544,
         md: 768,
         lg: 992,
         xl: 1200,

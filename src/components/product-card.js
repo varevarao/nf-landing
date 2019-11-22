@@ -12,7 +12,7 @@ const ProductCard = ({ image, title, desc, primary, action, onClick }) => {
                 <CardTitle size="small" variant="strong">
                     {title}
                 </CardTitle>
-                <CardDesc size="small">
+                <CardDesc size="xsmall" color="light">
                     {desc}
                 </CardDesc>
                 <CardActions>

@@ -10,21 +10,21 @@ const Sections = () => {
     return (
         <>
             {/* Landing */}
-            <HeroSection />
+            <HeroSection id="home" />
 
             {/* Main products */}
-            <ProductsSection />
+            <ProductsSection id="products" />
 
             {/* Technologies backing the main products */}
-            <SolutionsSection />
+            <SolutionsSection id="solutions" />
 
-            <Divider />
+            <Divider bg="white" />
 
             {/* Jobs! */}
-            <CareersSection />
+            <CareersSection id="careers" />
 
             {/* Web footer */}
-            <FooterSection />
+            <FooterSection id="footer" />
         </>
     )
 }

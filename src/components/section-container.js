@@ -32,19 +32,19 @@ const SectionSubheader = styled(CenteredRow)`
     padding-top: 1rem;
 `;
 
-const Section = ({ className, title, subtitle, children }) => (
-    <SectionContainer className={className}>
+const Section = ({ title, subtitle, children, ...props }) => (
+    <SectionContainer {...props}>
         <Container>
             <SectionHeader>
-                <Col xs="10" md="6">
-                    <DisplayText color="secondary" size="large" variant="strong">{Array.isArray(title) ? title[0] : title}</DisplayText>
-                    <DisplayText color="primary" size="large" variant="strong">{Array.isArray(title) ? title[1] : ''}</DisplayText>
+                <Col xs="12" md="8">
+                    <DisplayText color="secondary" size="xlarge" variant="strong">{Array.isArray(title) ? title[0] : title}</DisplayText>
+                    <DisplayText color="primary" size="xlarge" variant="strong">{Array.isArray(title) ? title[1] : ''}</DisplayText>
                 </Col>
             </SectionHeader>
             <SectionSubheader>
-                {/* <Col xs="12" md="8"> */}
-                <DisplayText color="light" size="xsmall">{subtitle}</DisplayText>
-                {/* </Col> */}
+                <Col xs="11" md="10">
+                    <DisplayText color="light" size="small">{subtitle}</DisplayText>
+                </Col>
             </SectionSubheader>
             <div className="section-content">
                 {children}
