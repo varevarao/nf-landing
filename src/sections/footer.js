@@ -50,7 +50,7 @@ const FooterContainer = styled(Section)`
 `;
 
 const FooterLogo = styled.img`
-    width: 100%;
+    width: 50%;
     margin-bottom: 1rem;
 `;
 
