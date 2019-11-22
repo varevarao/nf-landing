@@ -94,6 +94,7 @@ const Testimonial = styled.div`
 
         >span {
             width: 75%;
+            line-height: 1.15rem;
         }
     }
 `;
@@ -117,11 +118,9 @@ const SwipeableCards = ({ className, items, action, onAction }) => {
                                 <QuoteImage src={quote.image} />
                             </div>
                             <div className="content-area">
-
                                 <DisplayText size="small" styled="italic" color="white">
                                     {quote.desc}
                                 </DisplayText>
-
                             </div>
 
                             <DisplayText size="xsmall" styled="italic" color="white">

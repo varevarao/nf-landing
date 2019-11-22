@@ -5,9 +5,9 @@ export const DisplayText = styled.span`
     ${props => {
         switch (props.size) {
             case 'inherit': return css`font-size: inherit;`;
-            case 'xxsmall': return css`font-size: 0.5rem;line-height: 0.8rem;`;
-            case 'xsmall': return css`font-size: 0.6rem;line-height: 0.9rem;`;
-            case 'small': return css`font-size: 0.75rem;line-height: 1.05rem;`;
+            case 'xxsmall': return css`font-size: 0.5rem;line-height: 1rem;`;
+            case 'xsmall': return css`font-size: 0.6rem;line-height: 1.2rem;`;
+            case 'small': return css`font-size: 0.75rem;line-height: 1.5rem;`;
             case 'medium': return css`font-size: 1rem;line-height: 1.3rem;`;
             case 'large': return css`font-size: 1.25rem;line-height: 1.55rem;`;
             case 'xlarge': return css`font-size: 1.75rem;line-height: 2.05rem;`;
