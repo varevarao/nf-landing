@@ -1,7 +1,7 @@
 {
     "hero": {
         "image": "/img/nf-hero.jpg",
-        "wave": "/img/wave.svg"
+        "wave": "/img/wave@2x.png"
     },
     "headline": ["Simplifying the digital journey ", "of every business in India."],
     "subtext": "All users on Boost know that there are millions of people out there. Every day besides so many people joining this community."

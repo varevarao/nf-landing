@@ -82,9 +82,10 @@ const HeroText = styled.div`
 
 const HeroWave = styled.img`
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: -1px;
     width: 100vw;
-    height: auto;
 `;
 
 const HeroSection = ({ ...props }) => {
