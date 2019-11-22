@@ -21,10 +21,12 @@ export const DisplayText = styled.span`
     ${props => {
         switch (props.variant) {
             case 'inherit': return css`font-weight: inherit;`;
+            case 'extra': return css`font-weight: 700;`;
             case 'strong': return css`font-weight: 600;`;
+            case 'medium': return css`font-weight: 400;`;
             case 'subdued': return css`font-weight: 100;`;
             case 'regular': default:
-                return css`font-weight: 400;`;
+                return css`font-weight: 300;`;
         }
     }}
 
@@ -45,7 +47,7 @@ export const DisplayText = styled.span`
             case 'primary': return css`color: #ffb900;`;
             case 'secondary': return css`color: #4a4a4a;`;
             default:
-                return css`color: ${typeof props.color === 'string' ? props.color : 'black'};`;
+                return css`color: ${typeof props.color === 'string' ? props.color : '#2a2a2a'};`;
         }
     }}
 `;

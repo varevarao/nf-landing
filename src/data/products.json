@@ -1,3 +1,27 @@
 {
-    
+    "header": {
+        "title": [
+            "Take full control",
+            " of your business"
+        ],
+        "subtitle": "We help you do everything you need from setting up your business’ digital identity, pushing it to multiple channels, to managing it across, scaling it’s reach via cloud for entriprise level growth. Just pick the one from below which suites your business needs."
+    },
+    "cards": [
+        {
+            "image": "/img/logo-boost.png",
+            "title": "For small & medium businesses",
+            "desc": "from setting up your business’ digital identity, pushing it to multiple channels, to managing it across.",
+            "action": "Check Boost",
+            "primary": "primary",
+            "location": "https://nowfloats.com/boost"
+        },
+        {
+            "image": "/img/logo-kitsune.png",
+            "title": "For larger enterprises",
+            "desc": "from setting up your business’ digital identity, pushing it to multiple channels, to managing it across.",
+            "action": "Check Kitsune",
+            "primary": "#f06428",
+            "location": "https://getkitsune.com"
+        }
+    ]
 }

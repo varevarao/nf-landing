@@ -95,8 +95,7 @@ const SolutionsSection = ({ ...props }) => {
 
     return (
         <SolutionsContainer
-            title={["Solutions lead by", " innovation"]}
-            subtitle={"With our patented technologies*, we have built some cool li’l products which currently touches upon thousands of users, daily."}
+            {...Content.header}
             {...props}
         >
             <SolutionList className="split-view">

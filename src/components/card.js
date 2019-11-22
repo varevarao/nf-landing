@@ -5,7 +5,8 @@ import breakpoint from 'styled-components-breakpoint';
 const Card = styled.div`
     height: 20rem;
     width: 20rem;
-    
+    padding: 0 0.5rem;
+
     ${breakpoint('sm')`
         height: 20rem;
         width: 20rem;
@@ -18,21 +19,18 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 `;
 
 export const CardImage = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     
-    width: 100%;
-    height: 50%;
-
-    padding: 1rem;
+    width: 75%;
+    flex: 1;
 
     >img {
-        width: 50%;
+        width: 100%;
         object-fit: contain;
     }
 `;
@@ -40,12 +38,10 @@ export const CardImage = styled.div`
 export const CardContent = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
-    width: calc(100% - 1rem);
-    height: 50%;
-
-    padding: 1rem;
+    width: 100%;
+    flex: 2;
 
     text-align: center;
 `;
@@ -55,13 +51,10 @@ export const CardTitle = styled(DisplayText)`
 `;
 
 export const CardDesc = styled(DisplayText)`
-    margin-top: 1rem;
-    padding: 0 1rem;
+    padding: 0 3rem;
 `;
 
 export const CardActions = styled.div`
-    margin-top: 2rem;
-    
     display: flex;
     justify-content: center;
 `;

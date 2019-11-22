@@ -6,7 +6,7 @@ import SwipeableCards from '../components/swipeable-cards';
 import Content from '../data/careers.json';
 
 const CareersContainer = styled(Section)`
-    background-color: white;
+    background: linear-gradient(to bottom, #ffffff, #dbdbdb);
 `;
 
 const Testimonials = styled.div`
@@ -78,7 +78,10 @@ const CardsContainer = styled(SwipeableCards)`
 
 const CareersSection = ({ ...props }) => {
     return (
-        <CareersContainer title={["Do you love", " solving problems?"]} subtitle={"If the answer is ‘YES’, Just click on ‘Check opening’ Button below and see where you can fit in. NowFloats has been a exciting roller-coaster ride so far & with you, we are hoping it to get even more exciting."} {...props}>
+        <CareersContainer
+            {...Content.header}
+            {...props}
+        >
             <Testimonials>
                 <CareerBG />
                 <QuoteContainer />

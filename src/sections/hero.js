@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { DisplayText } from '../components/display-text';
 import Logo from '../components/logo';
-import Container from 'muicss/lib/react/container';
+import Content from '../data/hero.json';
 
 const HeroContainer = styled.section`
     min-height: 90vh;
@@ -31,7 +31,6 @@ const HeroContent = styled.div`
     
     ${breakpoint('xl')`
         padding-left: 5rem;
-        // padding-top: 5rem;
     `}
 `;
 
@@ -45,7 +44,7 @@ const HeroBG = styled.div`
     height: 100%;
     width: 100%;
 
-    background-image: url('/img/nf-hero.jpg');
+    background-image: url('${Content.hero.image}');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -84,7 +83,7 @@ const HeroText = styled.div`
 const HeroWave = styled.img`
     position: absolute;
     bottom: -1px;
-    width: 100%;
+    width: 100vw;
     height: auto;
 `;
 
@@ -95,12 +94,12 @@ const HeroSection = ({ ...props }) => {
             <HeroContent>
                 <Logo />
                 <HeroText>
-                    <DisplayText size="xxlarge" color="white">Simplifying the digital journey </DisplayText>
-                    <DisplayText size="xxlarge" color="primary">of every business in India.</DisplayText>
-                    <DisplayText className="subtext" size="small" color="white">All users on Boost know that there are millions of people out there. Every day besides so many people joining this community.</DisplayText>
+                    <DisplayText size="xxlarge" variant="strong" styled="italic" color="white">{Content.headline[0]}</DisplayText>
+                    <DisplayText size="xxlarge" variant="strong" styled="italic" color="primary">{Content.headline[1]}</DisplayText>
+                    <DisplayText className="subtext" size="small" color="white">{Content.subtext}</DisplayText>
                 </HeroText>
             </HeroContent>
-            <HeroWave src="/img/wave.svg" />
+            <HeroWave src={Content.hero.wave} />
         </HeroContainer>
     )
 }

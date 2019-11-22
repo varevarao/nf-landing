@@ -4,9 +4,10 @@ import React from 'react';
 import styled from 'styled-components';
 import ProductCard from '../components/product-card';
 import Section from '../components/section-container';
+import Content from '../data/products.json';
 
 const ProductsContainer = styled(Section)`
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    background: linear-gradient(to bottom, #ffffff, #dbdbdb);
 
     .cards {
         margin-top: 1rem;
@@ -26,31 +27,18 @@ const CenteredCol = styled(Col)`
 const ProductsSection = ({ ...props }) => {
     return (
         <ProductsContainer
-            title={["Take full control", " of your business"]}
-            subtitle={"We help you do everything you need from setting up your business’ digital identity, pushing it to multiple channels, to managing it across, scaling it’s reach via cloud for entriprise level growth. Just pick the one from below which suites your business needs."}
+            {...Content.header}
             {...props}
         >
             <Row className="cards">
-                <CenteredCol xs={12} md={6}>
-                    <ProductCard
-                        image="/img/boost-logo.png"
-                        title="For small & medium businesses"
-                        desc="from setting up your business’ digital identity, pushing it to multiple channels, to managing it across."
-                        primary="primary"
-                        action="Check Boost"
-                        onClick={() => window.location = 'https://nowfloats.com/boost'}
-                    />
-                </CenteredCol>
-                <CenteredCol xs={12} md={6}>
-                    <ProductCard
-                        image="/img/kitsune-logo.png"
-                        title="For larger enterprises"
-                        desc="from setting up your business’ digital identity, pushing it to multiple channels, to managing it across."
-                        primary="#f06428"
-                        action="Check Kitsune"
-                        onClick={() => window.location = 'https://getkitsune.com'}
-                    />
-                </CenteredCol>
+                {Content.cards.map(({ location, ...cardProps }, index) => (
+                    <CenteredCol xs={12} md={6} key={`kit-prod-card-${index}`}>
+                        <ProductCard
+                            {...cardProps}
+                            onClick={() => window.location = location}
+                        />
+                    </CenteredCol>
+                ))}
             </Row>
         </ProductsContainer>
     )
