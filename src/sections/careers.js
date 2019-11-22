@@ -7,6 +7,7 @@ import Content from '../data/careers.json';
 
 const CareersContainer = styled(Section)`
     background: linear-gradient(to bottom, #ffffff, #dbdbdb);
+    padding-bottom: 2rem;
 `;
 
 const Testimonials = styled.div`
@@ -27,7 +28,7 @@ const CareerBG = styled.div`
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 90vh;
+    height: 100%;
 
     filter: grayscale(1);
     background: url('/img/bitmap.jpg');
