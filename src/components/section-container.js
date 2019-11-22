@@ -9,6 +9,9 @@ const SectionContainer = styled.section`
     width: 100%;
     text-align: center;
 
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
     .section-title, .section-subtitle {
         width: 100%;
         text-align: center;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { DisplayText } from '../components/display-text';
 import Logo from '../components/logo';
+import Container from 'muicss/lib/react/container';
 
 const HeroContainer = styled.section`
     min-height: 90vh;
@@ -30,7 +31,7 @@ const HeroContent = styled.div`
     
     ${breakpoint('xl')`
         padding-left: 5rem;
-        padding-top: 5rem;
+        // padding-top: 5rem;
     `}
 `;
 
@@ -54,16 +55,37 @@ const HeroBG = styled.div`
 
 const HeroText = styled.div`
     margin-top: 5rem;
+    ${breakpoint('lg')`
+        margin-top: 7rem;
+    `};
+    
+    ${breakpoint('xl')`
+        margin-top: 10rem;
+    `};
+    
     display: flex;
     flex-direction: column;
+
+    span {
+        line-height: 3rem;
+    }
+
+    max-width: 85%;
+    ${breakpoint('md')`
+        max-width: 55%;
+    `};
+
+    .subtext {
+        margin-top: 2rem;
+        line-height: 1.3rem;
+    }
 `;
 
 const HeroWave = styled.img`
     position: absolute;
-    bottom: -2px;
+    bottom: -1px;
     width: 100%;
-
-    /* height: 3rem; */
+    height: auto;
 `;
 
 const HeroSection = ({ ...props }) => {
@@ -73,12 +95,12 @@ const HeroSection = ({ ...props }) => {
             <HeroContent>
                 <Logo />
                 <HeroText>
-                    <DisplayText size="xxlarge" color="white" styled="italic" variant="strong">Simplifying the digital journey </DisplayText>
-                    <DisplayText size="xxlarge" color="primary" styled="italic" variant="strong">of every business in India.</DisplayText>
-                    <DisplayText size="small" color="white">All users on Boost know that there are millions of people out there. Every day besides so many people joining this community.</DisplayText>
+                    <DisplayText size="xxlarge" color="white">Simplifying the digital journey </DisplayText>
+                    <DisplayText size="xxlarge" color="primary">of every business in India.</DisplayText>
+                    <DisplayText className="subtext" size="small" color="white">All users on Boost know that there are millions of people out there. Every day besides so many people joining this community.</DisplayText>
                 </HeroText>
             </HeroContent>
-            <HeroWave src="/img/wave.png" />
+            <HeroWave src="/img/wave.svg" />
         </HeroContainer>
     )
 }

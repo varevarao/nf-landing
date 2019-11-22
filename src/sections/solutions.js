@@ -31,21 +31,22 @@ const SolutionContent = styled.div`
 
     .title, .desc {
         width: 100%;
-        color: #9b9b9b;
     }
 
     .desc {
         margin-top: 0.5rem;
     }
 
-    ${props => props.selected && css`
-        .title {
-            color: #6797d1;
-        }
-
-        .desc {
-            color: #2a2a2a;
-        }
+    ${breakpoint('md')`
+        ${props => props.selected ? css`
+            .desc {
+                color: #2a2a2a;
+            }
+        ` : css`
+            .title, .desc {
+                color: #9b9b9b;
+            }
+        `}
     `}
 
     >img {
@@ -82,6 +83,13 @@ const ImageContent = styled(Col)`
     `}
 `;
 
+const ActiveIndicator = styled(Arrow)`
+    display: none;
+    ${breakpoint('md')`
+        display: inline-block;
+    `}
+`;
+
 const SolutionsSection = ({ ...props }) => {
     const [selected, setSelected] = React.useState(0);
 
@@ -96,8 +104,8 @@ const SolutionsSection = ({ ...props }) => {
                     {Content.list.map((sol, index) => (
                         <SolutionContent key={`kit-sol-content-${index}`} onClick={() => setSelected(index)} selected={selected === index}>
                             <SolutionImage key={`kit-sol-thumb-${index}`} src={sol.thumb} />
-                            <DisplayText className="title" variant="strong" size="medium">
-                                {selected === index ? <Arrow color="#6797d1" direction="right" /> : null} {sol.title}
+                            <DisplayText className="title" variant="strong" size="medium" color={sol.color}>
+                                {selected === index ? <ActiveIndicator color={sol.color} direction="right" /> : null} {sol.title}
                             </DisplayText>
                             <DisplayText className="desc" size="small">
                                 {sol.desc}

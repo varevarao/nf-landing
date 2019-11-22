@@ -3,26 +3,30 @@
         {
             "title": "Boost Keyboard",
             "desc": "With this keyboard, simply share your business updates, products, photos or your business’ location while chatting with your customers on an Instant messaging app of your choice.",
-            "image": "/img/group-7.jpg",
-            "thumb": "/img/sol-keyboard.jpg"
+            "image": "/img/keyboard-large.png",
+            "thumb": "/img/keyboard-icon.svg",
+            "color": "#6797D1"
         },
         {
             "title": "ANA Chatbot",
             "desc": "This open source patented technology allows any enterprise business to have a customized chatbot with a freedom to build most complex chat flows simply by dragging the scripts.",
-            "image": "/img/group-7.jpg",
-            "thumb": "/img/sol-ana.jpg"
+            "image": "/img/ana-large.png",
+            "thumb": "/img/ana-icon.svg",
+            "color": "#8DC63F"
         },
         {
             "title": "NowFloats Exchange",
             "desc": "NowFloats Exchange is responsible engine beind the successful data flow between different channels to maximize the impact of any content created by the business owner.",
-            "image": "/img/group-7.jpg",
-            "thumb": "/img/sol-nfx.jpg"
+            "image": "/img/nfx-large.png",
+            "thumb": "/img/nfx-icon.svg",
+            "color": "#F5A623"
         },
         {
             "title": "Rocket Singh (Beta)",
             "desc": "A Bot based app, helping your enterprise FOS with what they need to focus on today. No extra clutter so that they focus on the target. Also helps with their attendence, live location, instant discount approval, logging sales etc.",
-            "image": "/img/group-7.jpg",
-            "thumb": "/img/sol-singh.jpg"
+            "image": "/img/singh-large.png",
+            "thumb": "/img/singh-icon.svg",
+            "color": "#FFB900"
         }
     ]
 }

@@ -105,7 +105,7 @@ const SwipeableCards = ({ className, items, action, onAction }) => {
     return (
         <Container className={className}>
             <SwipeArea>
-                <SwipeArrow isHidden={active <= 0} bg={true} onClick={() => setActive(active - 1)} />
+                <SwipeArrow isHidden={active <= 0} bg={true} onClick={() => setActive(active - 1)} scale={0.5} />
                 <SwipeContainer
                     index={active}
                     onChangeIndex={index => setActive(index)}
@@ -130,7 +130,7 @@ const SwipeableCards = ({ className, items, action, onAction }) => {
                         </Testimonial>
                     ))}
                 </SwipeContainer>
-                <SwipeArrow direction="right" isHidden={active >= (totalElements - 1)} bg={true} onClick={() => setActive(active + 1)} />
+                <SwipeArrow direction="right" isHidden={active >= (totalElements - 1)} bg={true} onClick={() => setActive(active + 1)} scale={0.5} />
             </SwipeArea>
             <Dots>
                 {[...new Array(totalElements)].map((r, index) => (

@@ -9,17 +9,17 @@ import Col from 'muicss/lib/react/col';
 
 const FooterContainer = styled(Section)`
     background-color:  #323232;
+    padding-bottom: 0.5rem;
 
     .footer-content {
-        margin: 5rem 0;
+        margin-bottom: 5rem;
 
         text-align: left;
         color: white;
 
         .footer-main {
-            >img {
-                width: 100%;
-                margin-bottom: 1rem;
+            .desc {
+                margin-bottom: 2rem;
             }
         }
 
@@ -49,13 +49,22 @@ const FooterContainer = styled(Section)`
     }
 `;
 
+const FooterLogo = styled.img`
+    width: 100%;
+    margin-bottom: 1rem;
+`;
+
 const FooterSection = ({ ...props }) => {
     return (
         <FooterContainer {...props}>
             <Row className="footer-content">
                 <Col className="footer-main" sm={4} sm-offset={1}>
-                    <img src="/img/rgb-now-floats-logo-foot.png" alt="NowFloats" />
-                    <div className=""><DisplayText size="xsmall" color="white" variant="subdued" color="white">NowFloats' mission has always been to enable small and medium-sized businesses to easily bring their business online, and grow it there in a meaningful way.</DisplayText></div>
+                    <FooterLogo src="/img/rgb-now-floats-logo-foot.png" alt="NowFloats" />
+                    <div className="desc">
+                        <DisplayText size="xsmall" color="white" variant="subdued" color="white">
+                            NowFloats' mission has always been to enable small and medium-sized businesses to easily bring their business online, and grow it there in a meaningful way.
+                        </DisplayText>
+                    </div>
                 </Col>
                 <Col xs={4} sm={2} sm-offset={1}>
                     <DisplayText size="small" color="primary">Products</DisplayText>

@@ -7,8 +7,6 @@ import Section from '../components/section-container';
 
 const ProductsContainer = styled(Section)`
     background: linear-gradient(to bottom, #ffffff, #f0f0f0);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
 
     .cards {
         margin-top: 1rem;
@@ -35,7 +33,7 @@ const ProductsSection = ({ ...props }) => {
             <Row className="cards">
                 <CenteredCol xs={12} md={6}>
                     <ProductCard
-                        image="/img/boost-360-logo-final-rgb.jpg"
+                        image="/img/boost-logo.png"
                         title="For small & medium businesses"
                         desc="from setting up your business’ digital identity, pushing it to multiple channels, to managing it across."
                         primary="primary"
@@ -45,7 +43,7 @@ const ProductsSection = ({ ...props }) => {
                 </CenteredCol>
                 <CenteredCol xs={12} md={6}>
                     <ProductCard
-                        image="/img/kitsune-logo-rgb.jpg"
+                        image="/img/kitsune-logo.png"
                         title="For larger enterprises"
                         desc="from setting up your business’ digital identity, pushing it to multiple channels, to managing it across."
                         primary="#f06428"

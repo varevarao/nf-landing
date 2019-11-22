@@ -27,8 +27,9 @@ const CareerBG = styled.div`
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 100%;
+    height: 90vh;
 
+    filter: grayscale(1);
     background: url('/img/bitmap.jpg');
     background-size: cover;
     background-position: center;
